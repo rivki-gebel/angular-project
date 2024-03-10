@@ -1,0 +1,7 @@
+<div *ngFor="let recipe of recipesList">
+    <div (click)="this.showDetails(recipe)">
+    <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
+    </div>
+   
+</div>
+<app-log-out-button></app-log-out-button>
