@@ -1,6 +1,41 @@
-.addRecipe{
+.addRecipe {
     position: fixed;
     top: 0;
     left: 0;
     object-fit: cover;
 }
+
+.input {
+    margin-left: 60%;
+    direction: rtl;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.newRecipe {
+    color: #FFC312;
+    direction: rtl;
+
+}
+
+.input label {
+    margin-right: 1rem;
+    margin-left: 5%;
+    white-space: nowrap;
+    padding: 5px;
+}
+.custom-textarea {
+    width: 700px;
+    height: 100px;
+  }
+  .custom-select {
+    max-width: 400px;
+  }
+  .formRecipe{
+    margin-right: 5%;
+    margin-top: 2%;
+  }
+  .col{
+    margin-right: 2%;
+  }

@@ -6,13 +6,16 @@ import { RecipeDetailesComponent } from './recipe-detailes/recipe-detailes.compo
 import { SmallRecipeComponent } from './small-recipe/small-recipe.component';
 import { LogOutButtonComponent } from '../log-out-button/log-out-button.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from "../header/header.component";
 
 
 
 @NgModule({
-  declarations: [AllRecipesComponent, RecipeDetailesComponent,SmallRecipeComponent,AddRecipeComponent],
-  imports: [
-    CommonModule, RecipeRoutesModule,LogOutButtonComponent
-  ]
+    declarations: [AllRecipesComponent, RecipeDetailesComponent, SmallRecipeComponent, AddRecipeComponent],
+    imports: [
+        CommonModule, RecipeRoutesModule, LogOutButtonComponent, ReactiveFormsModule, FormsModule,
+        HeaderComponent
+    ]
 })
 export class RecipeModuleModule { }
