@@ -1,11 +1,11 @@
-<img fetchpriority="high" class="recipeImg" src={{recipe.imgUrl}}>
+<img class="recipeImg" [src]="recipe.imgUrl">
 <h1 class="display-5" >{{recipe.name}}</h1>
 
 <div class="dataContainer">
     <div style="direction: rtl;" class="badge text-bg-warning tab"><img class="timeIcon" src="../../../../assets/clock.png">
-        זמן הכנה {{recipe.preparationTime}} דקות</div>
+        זמן הכנה:{{recipe.preparationTime | hours }} </div>
     <div style="direction: rtl;" class="badge text-bg-warning tab"><span>{{recipe.category.iconUrl}}</span>
-        קטגוריה {{recipe.category.name}}</div>
+        קטגוריה:{{recipe.category.name}}</div>
     
 </div>
 
@@ -31,3 +31,8 @@
     <p style="color: black;">שלב {{i+1}}</p> 
     <p style="max-width: 50%;"> {{preparation}}</p> 
 </div>
+
+<p-button (click)="updateRecipe()" *ngIf="recipe.user.userName=== this.currentUser"
+ icon="pi pi-pencil" iconPos="right"></p-button>
+ <p-button (click)="deleteRecipe()" *ngIf="recipe.user.userName=== this.currentUser"
+ icon="pi pi-trash" iconPos="right"></p-button>

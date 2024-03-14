@@ -8,7 +8,11 @@ import { Recipe } from './recipeModel';
 })
 export class RecipeServiceService {
 
-  constructor(private _http: HttpClient) { }
+  public recipeToUpdate!:Recipe 
+  
+  constructor(private _http: HttpClient) { 
+    console.log(this.recipeToUpdate)
+  }
 
   getRecipesList(): Observable<Recipe[]> {
     return this._http.get<Recipe[]>('https://localhost:7020/api/Recipe')
@@ -20,11 +24,16 @@ export class RecipeServiceService {
  
   addRecipe(recipe: Recipe) {
     return this._http.post('https://localhost:7020/api/Recipe', recipe)
-    // this.productsList.push(product)
+ 
   }
 
-  updateRecipe(recipe: Recipe)
+  updateRecipe(id:number, recipe: Recipe)
   {
-    return this._http.put('https://localhost:7020/api/Recipe', recipe)
+    return this._http.put(`https://localhost:7020/api/Recipe/${id}`, recipe)
+  }
+
+  deleteRecipe(id:number)
+  {
+    return this._http.delete(`https://localhost:7020/api/Recipe/${id}`)
   }
 }

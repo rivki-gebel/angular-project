@@ -1,6 +1,9 @@
+
 <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
    
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">  -->
 
 <header class="p-3 text-bg-dark">
     <div class="container">
@@ -10,11 +13,9 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          <li><a href="/recipes/add-recipe" class="nav-link px-2 text-white">Add recipes</a></li>
+          <li><a href="/recipes/all-recipes" class="nav-link px-2 text-white">All recipes</a></li>
+
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -22,8 +23,10 @@
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <div class="nav-link px-2 text-secondary"><app-log-out-button></app-log-out-button></div>
+          <button  (click)="redirectToPageLogin()" type="button" class="btn btn-outline-light me-2">Login</button>
+          <button (click)="redirectToPageRegister()" type="button" class="btn btn-warning">Register</button>
+          
         </div>
       </div>
     </div>
