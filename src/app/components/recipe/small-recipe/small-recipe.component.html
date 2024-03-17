@@ -3,13 +3,22 @@
 
   <div class="card-body">
 
-    <ng-container class="stars" *ngFor="let index of [1, 2, 3, 4, 5]; let i = index">
-      <i *ngIf="i < recipeToShow.difficulty" class="pi pi-star-fill" style="color: #FFC312;"></i>
-      <i *ngIf="i >= recipeToShow.difficulty" class="pi pi-star-fill" style="color: grey;"></i>
-    </ng-container>
+    <div class="widthContainer">
+      <div class="stars">
+        <ng-container *ngFor="let index of [1, 2, 3, 4, 5]; let i = index">
+          <i *ngIf="i < recipeToShow.difficulty" class="pi pi-star-fill" style="color: #FFC312;"></i>
+          <i *ngIf="i >= recipeToShow.difficulty" class="pi pi-star-fill" style="color: grey;"></i>
+        </ng-container>
+      </div>
+
+      <div class="timeContain">
+        <div class="time">{{recipeToShow.preparationTime}}</div>
+        <p class="lable">:זמן הכנה</p>
+      </div>
+    </div>
 
     <hr>
-    <h5>{{recipeToShow.name}}</h5>
+    <h5 class="name">{{recipeToShow.name}}</h5>
 
   </div>
 </div>

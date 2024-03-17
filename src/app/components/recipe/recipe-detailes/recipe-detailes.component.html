@@ -1,3 +1,4 @@
+<app-header></app-header>
 <img class="recipeImg" [src]="recipe.imgUrl">
 <h1 class="display-5" >{{recipe.name}}</h1>
 
@@ -32,7 +33,7 @@
     <p style="max-width: 50%;"> {{preparation}}</p> 
 </div>
 
-<p-button (click)="updateRecipe()" *ngIf="recipe.user.userName=== this.currentUser"
+<p-button class="editB" (click)="updateRecipe()" *ngIf="recipe.user.userName=== this.currentUser"
  icon="pi pi-pencil" iconPos="right"></p-button>
- <p-button (click)="deleteRecipe()" *ngIf="recipe.user.userName=== this.currentUser"
+ <p-button class="editB" (click)="deleteRecipe()" *ngIf="recipe.user.userName=== this.currentUser"
  icon="pi pi-trash" iconPos="right"></p-button>

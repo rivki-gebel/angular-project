@@ -4,13 +4,14 @@ import { User } from '../user/userModel';
 import { UserService } from '../user/user.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
+import { ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule,ReactiveFormsModule,RouterModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class LoginComponent implements OnInit {
 

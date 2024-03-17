@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'recipes/all-recipes', pathMatch: 'full' },
     { path: 'login', loadComponent: () => import('./components/login/login.component').then(c => c.LoginComponent) },
     { path: 'register', loadComponent: () => import('./components/register/register.component').then(c => c.RegisterComponent) },
     { path: 'recipes', loadChildren: () => import('./components/recipe/recipe-module.module').then(c => c.RecipeModuleModule) },
